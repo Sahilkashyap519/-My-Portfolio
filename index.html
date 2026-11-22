@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A student portfolio with a JavaScript quiz and dark/light theme switcher.">
+  <title>Student Portfolio | Assignment 10</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#home">My<span>Portfolio</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to light mode">☀️ Light Mode</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">HELLO, I'M A STUDENT</p>
+        <h1>Building skills.<br><span>Creating ideas.</span></h1>
+        <p class="hero-text">Welcome to my personal portfolio. I am learning web development and enjoy turning ideas into useful digital experiences.</p>
+        <a class="primary-btn" href="#about">Explore my portfolio <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-card" aria-label="Portfolio introduction graphic">
+        <div class="avatar">👨‍💻</div>
+        <p class="card-label">STUDENT DEVELOPER</p>
+        <h2>Learn · Build · Grow</h2>
+        <p>Curious mind, creative work.</p>
+      </div>
+    </section>
+
+    <section class="section container" id="about">
+      <p class="eyebrow">GET TO KNOW ME</p>
+      <h2 class="section-title">About Me</h2>
+      <p class="section-description">I am a computer science student interested in programming, problem-solving and front-end development. This website is a small showcase of my learning journey.</p>
+    </section>
+
+    <section class="section container" id="skills">
+      <p class="eyebrow">WHAT I'M LEARNING</p>
+      <h2 class="section-title">My Skills</h2>
+      <div class="skill-grid">
+        <article class="skill-card"><span>🌐</span><h3>HTML</h3><p>Creating the structure of web pages.</p></article>
+        <article class="skill-card"><span>🎨</span><h3>CSS</h3><p>Styling pages with layouts and colours.</p></article>
+        <article class="skill-card"><span>⚡</span><h3>JavaScript</h3><p>Adding interaction and functionality.</p></article>
+        <article class="skill-card"><span>🐍</span><h3>Python</h3><p>Learning programming and logic building.</p></article>
+      </div>
+    </section>
+
+    <section class="section container quiz-section" id="quiz">
+      <div class="quiz-heading">
+        <div><p class="eyebrow">TEST YOUR KNOWLEDGE</p><h2 class="section-title">JavaScript & Web Quiz</h2></div>
+        <span class="quiz-count" id="progress">Question 1 of 5</span>
+      </div>
+      <div class="quiz-card">
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+        <h3 id="question">Loading question...</h3>
+        <div id="options" class="options"></div>
+        <p id="feedback" class="feedback" aria-live="polite"></p>
+        <div class="quiz-actions">
+          <span id="scorePreview">Choose one answer</span>
+          <button id="nextButton" class="primary-btn" type="button" disabled>Next Question →</button>
+        </div>
+        <div id="result" class="result" aria-live="polite" hidden></div>
+        <button id="restartButton" class="secondary-btn" type="button" hidden>Try Again</button>
+      </div>
+    </section>
+
+    <section class="section container contact-section" id="contact">
+      <p class="eyebrow">LET'S CONNECT</p><h2 class="section-title">Contact</h2>
+      <p class="section-description">Thanks for visiting my portfolio. You can add your email address or social links here.</p>
+      <a class="primary-btn" href="mailto:student@example.com">Send an Email</a>
+    </section>
+  </main>
+
+  <footer><p>© <span id="year"></span> My Portfolio · Created for Assignment 10</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
